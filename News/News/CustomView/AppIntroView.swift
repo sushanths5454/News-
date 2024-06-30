@@ -19,6 +19,14 @@ struct AppIntroView: View {
             }
             .tabViewStyle(.page)
             .edgesIgnoringSafeArea(.all )
+            VStack() {
+                Spacer()
+                Text("sushanth")
+                    .padding(.bottom, 50)
+                    .foregroundColor(.white)
+            }
+            
+            
         }
     }
 }
