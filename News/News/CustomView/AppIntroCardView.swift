@@ -41,7 +41,10 @@ struct AppIntroCardView: View {
                     .padding(.leading, 20)
                     .padding(.bottom, 200)
                     .font(.system(size: 20))
+                //Spacer()
+                
             }
+            
             
            
         }

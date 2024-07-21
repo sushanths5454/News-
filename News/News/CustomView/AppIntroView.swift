@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 struct AppIntroView: View {
 //TO:DO add image name in separate array
     @ObservedObject var viewmodel = NewsViewModel()
@@ -15,23 +15,21 @@ struct AppIntroView: View {
             TabView {
                 ForEach((0 ..< viewmodel.title.count), id: \.self) { index in
                     AppIntroCardView(imageName: "Image", title: "\(viewmodel.title[index])", subtitle: "\(viewmodel.subTitle[index])")
+                        .edgesIgnoringSafeArea(.all )
                 }
             }
             .tabViewStyle(.page)
             .edgesIgnoringSafeArea(.all )
-            VStack() {
-                Spacer()
-                Text("sushanth")
-                    .padding(.bottom, 50)
-                    .foregroundColor(.white)
-            }
+
             
             
-        }
+        }.ignoresSafeArea()
+        .edgesIgnoringSafeArea(.all )
     }
 }
 
 #Preview {
     AppIntroView()
         .edgesIgnoringSafeArea(.all )
+        .ignoresSafeArea()
 }

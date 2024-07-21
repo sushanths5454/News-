@@ -11,7 +11,13 @@ import SwiftUI
 struct NewsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+                    //.ignoresSafeArea()
+                    
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            }
+            
         }
     }
 }
